@@ -98,6 +98,20 @@ navLinks.querySelectorAll("a").forEach(link => {
 });
 
 /* ============================================
+   TOOLKIT: show more / less tags
+   ============================================ */
+const tagToggle = document.getElementById("tagToggle");
+const tagList = document.getElementById("tagList");
+ 
+if (tagToggle && tagList) {
+  tagToggle.addEventListener("click", () => {
+    const expanded = tagList.classList.toggle("is-expanded");
+    tagToggle.textContent = expanded ? "Show less" : "Show more";
+    tagToggle.setAttribute("aria-expanded", String(expanded));
+  });
+}
+
+/* ============================================
    SECTION REVEAL on scroll
    ============================================ */
 const revealTargets = document.querySelectorAll(".section__head, .about__grid, .card-grid, .contact__grid");
