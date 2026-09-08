@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Egan — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <header class="nav">
+        <a class="nav__mark" href="#hero">M. Egan</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav__links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="hero" class="hero">
+            <span class="crosshair crosshair--tl" aria-hidden="true"></span>
+            <span class="crosshair crosshair--br" aria-hidden="true"></span>
+            <div class="hero__inner">
+                <p class="hero__kicker">Computer Science &amp; Information Technology, University of Galway</p>
+                <h1 class="hero__name">
+                    <span class="reveal-line">Michael</span>
+                    <span class="reveal-line">Egan</span>
+                </h1>
+                <p class="hero__tagline">Final-year student building software to my my life easier.</p>
+                <div class="hero__actions">
+                    <a href="#projects" class="btn btn--primary">See my work</a>
+                    <a href="#contact" class="btn btn--ghost">Get in touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section about">
+            <div class="section__head">
+                <h2>About</h2>
+            </div>
+            <div class="about__grid">
+                <div class="about__text">
+                    <p>
+                        I'm a 4th year Computer Science &amp; Information Technology student at the
+                        University of Galway. I spend most of my time balancing too many hobbies and half-finished side
+                        projects. I like making software that solves a real problem and I like understanding how the
+                        layers underneath it work, not just the framework on top.
+                    </p>
+                    <p>
+                        Outside of coursework, I build small tools, contribute to projects I care about,
+                        and I'm currently looking for graduate opportunities where I can keep learning
+                        fast and shipping things that matter.
+                    </p>
+                    <a class="about__cv" href="MichaelEganCV.pdf" download>Download CV</a>
+                </div>
+                <div class="about__facts">
+                    <div class="fact">
+                        <span class="fact__label">Studying</span>
+                        <span class="fact__value">B.Sc. Computer Science &amp; IT</span>
+                    </div>
+                    <div class="fact">
+                        <span class="fact__label">Based in</span>
+                        <span class="fact__value">Galway, Ireland</span>
+                    </div>
+                    <div class="fact">
+                        <span class="fact__label">Focus areas</span>
+                        <span class="fact__value">Web &amp; systems development, data</span>
+                    </div>
+                    <div class="fact fact--tags">
+                        <span class="fact__label">Toolkit</span>
+                        <div class="tag-list">
+                            <span class="tag">Java</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section">
+            <div class="section__head">
+                <h2>Projects</h2>
+                <p class="section__note">A selection of things I've built. More added semi-regularly.</p>
+            </div>
+            <div class="card-grid" id="projectGrid"></div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="section">
+            <div class="section__head">
+                <h2>Certifications</h2>
+                <p class="section__note">Courses and credentials I've completed alongside my degree.</p>
+            </div>
+            <div class="card-grid" id="certGrid"></div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section contact">
+            <div class="section__head">
+                <h2>Contact</h2>
+                <p class="section__note">Have a role, a project, or just a question? I'd like to hear from you.</p>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__portrait">
+                    <img src="headshot.jpg" alt="Portrait of Michael Egan">
+                </div>
+                <div class="contact__links">
+                    <a href="mailto:michael.egan@example.com" class="contact__link">
+                        <span class="contact__link-label">Email</span>
+                        <span class="contact__link-value">michael.egan@example.com</span>
+                    </a>
+                    <a href="https://github.com/mykkey" target="_blank" rel="noopener" class="contact__link">
+                        <span class="contact__link-label">GitHub</span>
+                        <span class="contact__link-value">github.com/mykkey</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/michael-egan-profile/" target="_blank" rel="noopener"
+                        class="contact__link">
+                        <span class="contact__link-label">LinkedIn</span>
+                        <span class="contact__link-value">linkedin.com/in/michael-egan-profile/</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Michael Egan — University of Galway. Built by hand, with too many browser tabs open.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
