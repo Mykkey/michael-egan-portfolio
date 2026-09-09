@@ -45,12 +45,44 @@ const projects = [
 
 const certifications = [
   {
-    title: "Cisco Introdution to Cybersecurity",
+    title: "Introdution to Cybersecurity",
     meta: "Cisco · 2025",
     description: "An introductory Cisco Networking Academy credential that teaches the basics of cybersecurity, common threats, data protection, and how organisations defend against attacks.",
     tags: ["Cybersecurity", "Data Protection"],
     linkLabel: "View credential",
-    linkUrl: "#"
+    linkUrl: "https://www.credly.com/badges/c3679bf5-98d6-45bb-b018-8196e9bb68eb/public_url"
+  },
+  {
+    title: "Introdution to Cybersecurity Awareness",
+    meta: "HP · 2026",
+    description: "An introductory HP LIFE credential that teaches the fundamentals of cybersecurity awareness, online safety, data protection, and how to recognise common security threats.",
+    tags: ["Cybersecurity", "Data Protection"],
+    linkLabel: "View credential",
+    linkUrl: "https://www.life-global.org/certificate/8237f235-cdc1-4f1e-9418-7598c5941a37"
+  },
+  {
+    title: "AI for Business Professionals",
+    meta: "HP · 2026",
+    description: "An introductory HP LIFE credential that explores how artificial intelligence can be used in business, including AI tools, applications, productivity, and responsible use.",
+    tags: ["Artificial Intelligence", "Business"],
+    linkLabel: "View credential",
+    linkUrl: "https://www.life-global.org/certificate/2258304f-b943-453b-bdd6-d31484daf8b1"
+  },
+  {
+    title: "AI for Beginners",
+    meta: "HP · 2026",
+    description: "An introductory HP LIFE credential that teaches the fundamentals of artificial intelligence, including key concepts, common applications, and the impact of AI.",
+    tags: ["Artificial Intelligence", "Machine Learning"],
+    linkLabel: "View credential",
+    linkUrl: "https://www.life-global.org/certificate/c87440c9-46b8-48e1-b210-d1215f1339a4"
+  },
+  {
+    title: "Data Science & Analytics",
+    meta: "HP · 2026",
+    description: "An introductory HP LIFE credential that teaches the fundamentals of data science and analytics, including data analysis, visualisation, and using data to support decisions.",
+    tags: ["Data Science", "Data Analytics"],
+    linkLabel: "View credential",
+    linkUrl: "https://www.life-global.org/certificate/17eb761c-f807-4373-9b22-f566dbf8dbdb"
   }
 ];
 
