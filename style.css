@@ -194,7 +194,6 @@ main, .nav, .footer { position: relative; z-index: 1; }
   opacity: 0;
   animation: fade-up 0.7s var(--ease) 0.15s forwards;
 }
-
 .hero__name {
   font-size: clamp(3rem, 9vw, 5.5rem);
   line-height: 0.98;
@@ -203,7 +202,7 @@ main, .nav, .footer { position: relative; z-index: 1; }
 }
 .hero__name .reveal-line {
   display: block;
-  overflow: hidden;
+  overflow: visible;
 }
 .hero__name .reveal-line span,
 .hero__name .reveal-line {
