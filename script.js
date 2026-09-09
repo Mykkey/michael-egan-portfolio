@@ -9,7 +9,7 @@ const projects = [
   },
   {
     title: "Shoot The Shapes",
-    meta: "Coursework · Games Development, 2025",
+    meta: "Games Development Project · 2025",
     description: "A Java Swing arcade-style game where players control a turret to shoot moving geometric shapes. Features multiple shape types, increasing difficulty levels, score tracking, and collision detection with real-time feedback.",
     tags: ["C#", "Unity"],
     linkLabel: "View on GitHub",
