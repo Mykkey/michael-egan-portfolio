@@ -1,5 +1,5 @@
 const projects = [
-    {
+  {
     title: "Winterbourne Consulting",
     meta: "Client Work · 2026",
     description: "I handled the digital setup for Winterbourne Consulting, including website development, domain configuration, Microsoft 365 admin setip, and iterative logo refinement.",
@@ -45,44 +45,80 @@ const projects = [
 
 const certifications = [
   {
-    title: "Introdution to Cybersecurity",
-    meta: "Cisco · 2025",
-    description: "An introductory Cisco Networking Academy credential that teaches the basics of cybersecurity, common threats, data protection, and how organisations defend against attacks.",
-    tags: ["Cybersecurity", "Data Protection"],
-    linkLabel: "View credential",
-    linkUrl: "https://www.credly.com/badges/c3679bf5-98d6-45bb-b018-8196e9bb68eb/public_url"
+    category: "Cybersecurity",
+    items: [
+      {
+        title: "Introdution to Cybersecurity",
+        meta: "Cisco · 2025",
+        description: "An introductory Cisco Networking Academy credential that teaches the basics of cybersecurity, common threats, data protection, and how organisations defend against attacks.",
+        tags: ["Cybersecurity", "Data Protection"],
+        linkLabel: "View credential",
+        linkUrl: "https://www.credly.com/badges/c3679bf5-98d6-45bb-b018-8196e9bb68eb/public_url"
+      },
+      {
+        title: "Introdution to Cybersecurity Awareness",
+        meta: "HP · 2026",
+        description: "An introductory HP LIFE credential that teaches the fundamentals of cybersecurity awareness, online safety, data protection, and how to recognise common security threats.",
+        tags: ["Cybersecurity", "Data Protection"],
+        linkLabel: "View credential",
+        linkUrl: "https://www.life-global.org/certificate/8237f235-cdc1-4f1e-9418-7598c5941a37"
+      }
+    ]
   },
   {
-    title: "Introdution to Cybersecurity Awareness",
-    meta: "HP · 2026",
-    description: "An introductory HP LIFE credential that teaches the fundamentals of cybersecurity awareness, online safety, data protection, and how to recognise common security threats.",
-    tags: ["Cybersecurity", "Data Protection"],
-    linkLabel: "View credential",
-    linkUrl: "https://www.life-global.org/certificate/8237f235-cdc1-4f1e-9418-7598c5941a37"
+    category: "AI",
+    items: [
+      {
+        title: "AI for Business Professionals",
+        meta: "HP · 2026",
+        description: "An introductory HP LIFE credential that explores how artificial intelligence can be used in business, including AI tools, applications, productivity, and responsible use.",
+        tags: ["Artificial Intelligence", "Business"],
+        linkLabel: "View credential",
+        linkUrl: "https://www.life-global.org/certificate/2258304f-b943-453b-bdd6-d31484daf8b1"
+      },
+      {
+        title: "AI for Beginners",
+        meta: "HP · 2026",
+        description: "An introductory HP LIFE credential that teaches the fundamentals of artificial intelligence, including key concepts, common applications, and the impact of AI.",
+        tags: ["Artificial Intelligence", "Machine Learning"],
+        linkLabel: "View credential",
+        linkUrl: "https://www.life-global.org/certificate/c87440c9-46b8-48e1-b210-d1215f1339a4"
+      },
+      {
+        title: "Strategic Planning in the AI Age",
+        meta: "HP · 2026",
+        description: "Explores how artificial intelligence is transforming strategic planning, including identifying opportunities, assessing risks, and using AI to support business decision-making.",
+        tags: ["Artificial Intelligence", "Strateguc Planning"],
+        linkLabel: "View credential",
+        linkUrl: "https://www.life-global.org/certificate/ca3aa33d-0263-4b32-b75f-b6d1c45dcde1"
+      }
+    ]
   },
   {
-    title: "AI for Business Professionals",
-    meta: "HP · 2026",
-    description: "An introductory HP LIFE credential that explores how artificial intelligence can be used in business, including AI tools, applications, productivity, and responsible use.",
-    tags: ["Artificial Intelligence", "Business"],
-    linkLabel: "View credential",
-    linkUrl: "https://www.life-global.org/certificate/2258304f-b943-453b-bdd6-d31484daf8b1"
+    category: "IT",
+    items: [
+      {
+        title: "IT for Business Success",
+        meta: "HP · 2026",
+        description: "Introduces how information technology supports business operations, improves efficiency, enables innovation, and contributes to organisational success.",
+        tags: ["Information Technology", "Business"],
+        linkLabel: "View credential",
+        linkUrl: "https://www.life-global.org/certificate/8373a768-26ad-4238-ac6e-cecfe14e3943"
+      }
+    ]
   },
   {
-    title: "AI for Beginners",
-    meta: "HP · 2026",
-    description: "An introductory HP LIFE credential that teaches the fundamentals of artificial intelligence, including key concepts, common applications, and the impact of AI.",
-    tags: ["Artificial Intelligence", "Machine Learning"],
-    linkLabel: "View credential",
-    linkUrl: "https://www.life-global.org/certificate/c87440c9-46b8-48e1-b210-d1215f1339a4"
-  },
-  {
-    title: "Data Science & Analytics",
-    meta: "HP · 2026",
-    description: "An introductory HP LIFE credential that teaches the fundamentals of data science and analytics, including data analysis, visualisation, and using data to support decisions.",
-    tags: ["Data Science", "Data Analytics"],
-    linkLabel: "View credential",
-    linkUrl: "https://www.life-global.org/certificate/17eb761c-f807-4373-9b22-f566dbf8dbdb"
+    category: "Data Science",
+    items: [
+      {
+        title: "Data Science & Analytics",
+        meta: "HP · 2026",
+        description: "An introductory HP LIFE credential that teaches the fundamentals of data science and analytics, including data analysis, visualisation, and using data to support decisions.",
+        tags: ["Data Science", "Data Analytics"],
+        linkLabel: "View credential",
+        linkUrl: "https://www.life-global.org/certificate/17eb761c-f807-4373-9b22-f566dbf8dbdb"
+      }
+    ]
   }
 ];
 
@@ -93,7 +129,7 @@ const certifications = [
 function renderCards(list, targetId, cardClass) {
   const grid = document.getElementById(targetId);
   if (!grid) return;
-
+ 
   grid.innerHTML = list.map(item => `
     <article class="card ${cardClass}">
       <span class="card__meta">${item.meta}</span>
@@ -107,9 +143,63 @@ function renderCards(list, targetId, cardClass) {
     </article>
   `).join("");
 }
-
+ 
 renderCards(projects, "projectGrid", "card--project");
-renderCards(certifications, "certGrid", "card--cert");
+
+/* ============================================
+   RENDERING: Certifications (accordion, grouped by area)
+   ============================================ */
+ 
+function renderCertAccordion(groups, targetId) {
+  const container = document.getElementById(targetId);
+  if (!container) return;
+ 
+  container.innerHTML = groups.map((group, index) => {
+    const isFirst = index === 0;
+    const count = group.items.length;
+    const countLabel = `${count} credential${count === 1 ? "" : "s"}`;
+ 
+    const cardsHtml = group.items.map(item => `
+      <article class="card card--cert">
+        <span class="card__meta">${item.meta}</span>
+        <h3 class="card__title">${item.title}</h3>
+        <p class="card__desc">${item.description}</p>
+        ${item.tags && item.tags.length ? `
+          <div class="card__tags">
+            ${item.tags.map(tag => `<span>${tag}</span>`).join("")}
+          </div>` : ""}
+        ${item.linkUrl ? `<a class="card__link" href="${item.linkUrl}" target="_blank" rel="noopener">${item.linkLabel || "Learn more"}</a>` : ""}
+      </article>
+    `).join("");
+ 
+    return `
+      <div class="acc-item">
+        <button type="button" class="acc-header" aria-expanded="${isFirst ? "true" : "false"}">
+          <span class="acc-header__title">${group.category}</span>
+          <span class="acc-header__count">${countLabel}</span>
+          <span class="acc-chevron" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel ${isFirst ? "is-open" : ""}">
+          <div class="acc-panel__inner">
+            <div class="card-grid">
+              ${cardsHtml}
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+ 
+  container.querySelectorAll(".acc-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const panel = header.nextElementSibling;
+      const isOpen = panel.classList.toggle("is-open");
+      header.setAttribute("aria-expanded", String(isOpen));
+    });
+  });
+}
+ 
+renderCertAccordion(certifications, "certAccordion");
 
 /* ============================================
    NAV: mobile toggle
@@ -134,7 +224,7 @@ navLinks.querySelectorAll("a").forEach(link => {
    ============================================ */
 const tagToggle = document.getElementById("tagToggle");
 const tagList = document.getElementById("tagList");
- 
+
 if (tagToggle && tagList) {
   tagToggle.addEventListener("click", () => {
     const expanded = tagList.classList.toggle("is-expanded");

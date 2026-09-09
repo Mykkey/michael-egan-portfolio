@@ -505,6 +505,81 @@ main, .nav, .footer { position: relative; z-index: 1; }
 }
 
 /* ============================================
+   ACCORDION (Certifications, grouped by area)
+   ============================================ */
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+ 
+.acc-item {
+  border-bottom: 1px solid var(--line);
+}
+.acc-item:first-child {
+  border-top: 1px solid var(--line);
+}
+ 
+.acc-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: none;
+  border: none;
+  padding: 22px 2px;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  transition: color 0.25s var(--ease);
+}
+.acc-header:hover {
+  color: var(--blue-deep);
+}
+ 
+.acc-header__title {
+  flex-shrink: 0;
+}
+ 
+.acc-header__count {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}
+ 
+.acc-chevron {
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+  border-right: 1.5px solid var(--ink-faint);
+  border-bottom: 1.5px solid var(--ink-faint);
+  transform: rotate(45deg);
+  transition: transform 0.35s var(--ease);
+}
+.acc-header[aria-expanded="true"] .acc-chevron {
+  transform: rotate(225deg);
+}
+ 
+.acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s var(--ease);
+}
+.acc-panel.is-open {
+  grid-template-rows: 1fr;
+}
+.acc-panel__inner {
+  overflow: hidden;
+}
+.acc-panel .card-grid {
+  padding-bottom: 32px;
+}
+
+/* ============================================
    CONTACT
    ============================================ */
 .contact__grid {
