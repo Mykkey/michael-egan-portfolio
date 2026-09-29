@@ -7,6 +7,14 @@ const projects = [
     linkLabel: "View Website",
     linkUrl: "https://winterbourneconsulting.com"
   },
+    {
+    title: "AlgorithmAtlas",
+    meta: "Personal Project · 2026",
+    description: "An interactive algorithm visualization website built with HTML, CSS, and JavaScript. Explore sorting algorithms, grid-based pathfinding, and graph traversal with step-by-step animations.",
+    tags: ["JavaScript", "CSS", "HTML"],
+    linkLabel: "View on GitHub",
+    linkUrl: "https://github.com/Mykkey/AlgorithmAtlas"
+  },
   {
     title: "Shoot The Shapes",
     meta: "Games Development Project · 2025",
